@@ -41,11 +41,17 @@ public class KafkaStreamExampleApplicationTestsIT {
 //	
 	@Test
 	public void sendTest() {
+		System.out.println("=========Before send=====");
 		stream.msgPublisher().send(MessageBuilder.withPayload("Hello1234").build());
+		System.out.println("=========After send=====");
 		try {
+			System.out.println("=========Before latch=====");
 			listener.getLatch().await(15, TimeUnit.SECONDS);
+			System.out.println("=========After latch=====");
+
 		} catch (InterruptedException e) {
 			// TODO Auto-generated catch block
+			System.out.println("=========error====="+e);
 			e.printStackTrace();
 		}
 		System.out.println("Done Testing...");

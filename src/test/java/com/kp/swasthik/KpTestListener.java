@@ -14,11 +14,12 @@ public class KpTestListener {
 	
 	@StreamListener(HelloTestStream.IN_CHANNEL)
 	public void handleMessage(@Payload String message) {
-		System.out.println("================="+message);
+		System.out.println("=====message==========="+message);
 		latch.countDown();
 	}
 	
 	public CountDownLatch getLatch() {
+		System.out.println("=====latch============"+latch);
 		return latch;
 	}
 
