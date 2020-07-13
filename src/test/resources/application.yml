@@ -6,9 +6,9 @@ spring:
           brokers:
           - localhost
       bindings:
-        kp-in-channel:
-          destination: kp-hello-topic
+        kp-in-test-channel:
+          destination: kp-hello-test-topic
           content-type: text/plain
-        kp-out-channel:
-          destination: kp-hello-topic
+        kp-out-test-channel:
+          destination: kp-hello-test-topic
           content-type: text/plain
