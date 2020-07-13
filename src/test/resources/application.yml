@@ -1,0 +1,14 @@
+spring:
+  cloud:
+    stream:
+      kafka:
+        binder:
+          brokers:
+          - localhost
+      bindings:
+        kp-in-channel:
+          destination: kp-hello-topic
+          content-type: text/plain
+        kp-out-channel:
+          destination: kp-hello-topic
+          content-type: text/plain
