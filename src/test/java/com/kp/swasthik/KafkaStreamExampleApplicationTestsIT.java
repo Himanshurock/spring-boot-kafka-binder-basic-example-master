@@ -21,7 +21,7 @@ import org.springframework.test.context.junit4.SpringRunner;
 @SpringBootTest
 @DirtiesContext
 @EnableBinding(HelloTestStream.class)
-@EmbeddedKafka(topics = { "kp-hello-topic", "kp-hello-test-topic" }, brokerProperties = { "listeners=PLAINTEXT://kafka:9092" })
+@EmbeddedKafka(topics = { "kp-hello-topic", "kp-hello-test-topic" })
 public class KafkaStreamExampleApplicationTestsIT {
 
 //	@ClassRule
